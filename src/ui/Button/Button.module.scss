@@ -1,13 +1,14 @@
 .button {
-  display: inline-block;
+  display: flex;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 7px;
   cursor: pointer;
   text-align: center;
   border: none;
   border-radius: 5px;
   font-size: 14px;
   transition: background 0.2s;
+  align-items: center;
 }
 
 .button:hover {

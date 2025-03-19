@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
+import { SideBar } from "@/components";
+import "../styles/main.scss";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -20,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable}`}>{children}</body>
+      <body className={`${roboto.variable}`}>
+        <SideBar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,7 +1,20 @@
-import { FC } from "react";
-import styles from "./Button.module.css";
-import { IButton } from "./Button.props";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  FC,
+  ReactNode,
+} from "react";
+import styles from "./Button.module.scss";
 import cn from "classnames";
+
+interface IButton
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  appearance: "primary" | "ghost";
+  children: ReactNode;
+}
 
 const Button: FC<IButton> = (props) => {
   return (
@@ -17,4 +30,6 @@ const Button: FC<IButton> = (props) => {
   );
 };
 
-export default Button;
+const MemoizedButton = React.memo(Button);
+
+export default MemoizedButton;

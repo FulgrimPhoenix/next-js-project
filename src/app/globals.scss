@@ -1,6 +1,9 @@
+// @import "../styles/main.scss";
+
 :root {
   --black: #3b434e;
   --white: #fff;
+  --grey: #a4a4a4;
   --grey-light: #ebebeb;
   --primary: #7653fc;
   --primary-hover: #8f72ff;
@@ -12,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: rgb(245, 246, 248);
     --foreground: #ededed;
   }
 }

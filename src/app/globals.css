@@ -1,6 +1,13 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black: #3b434e;
+  --white: #fff;
+  --grey-light: #ebebeb;
+  --primary: #7653fc;
+  --primary-hover: #8f72ff;
+  --red: #fc836d;
+  --green: #1dc37e;
+  --green-light: #c8f8e4;
+  --font-family: "Roboto", "Roboto Fallback";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,8 +19,10 @@
 
 html,
 body {
-  max-width: 100vw;
   overflow-x: hidden;
+  max-width: 100vw;
+  color: var(--black);
+  background: #f5f6f8;
 }
 
 body {
@@ -26,13 +35,13 @@ body {
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 @media (prefers-color-scheme: dark) {

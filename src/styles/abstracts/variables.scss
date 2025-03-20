@@ -1,6 +1,12 @@
-$primary-color: #a18a68;
-$secondary-color: #d8d8d8;
-$text-color: #000;
+$black: #3b434e;
+$white: #fff;
+$gray: #a4a4a4;
+$gray-light: #ebebeb;
+$primary: #7653fc;
+$primary-hover: #8f72ff;
+$red: #fc836d;
+$green: #1dc37e;
+$green-light: #c8f8e4;
 
 $breakpoints: (
   "mobile": 425px,
@@ -10,6 +16,6 @@ $breakpoints: (
 
 // --text-color: #000;
 // --accent-main: #a18a68;
-// --grey-accent: #d8d8d8;
+// --gray-accent: #d8d8d8;
 // --accent-text-color: #fff;
 // --black-accent: #000;

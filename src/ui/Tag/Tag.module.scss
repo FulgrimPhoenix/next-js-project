@@ -1,0 +1,48 @@
+@import "@/styles/abstracts/variables.scss";
+
+.tag {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+  border-radius: 20px;
+  padding: 5px 12px;
+  color: $black;
+}
+
+.sm {
+  line-height: 12px;
+  font-size: 12px;
+}
+
+.md {
+  line-height: 14px;
+  font-size: 14px;
+}
+
+.ghost {
+  border: 1px solid $gray-light;
+}
+
+.red {
+  color: $white;
+  font-weight: 600;
+  background-color: #de0000;
+}
+
+.primary {
+  border: 1px solid $primary;
+
+  color: $primary;
+}
+
+.green {
+  background-color: $green-light;
+  font-weight: 600;
+  color: $green;
+}
+
+.gray {
+  background-color: $gray;
+  font-weight: 600;
+  color: $white;
+}

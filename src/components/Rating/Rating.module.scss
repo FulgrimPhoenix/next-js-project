@@ -1,0 +1,10 @@
+.rating {
+  .star {
+    box-sizing: content-box;
+    padding-right: 5px;
+  }
+
+  .isEditable {
+    cursor: pointer;
+  }
+}

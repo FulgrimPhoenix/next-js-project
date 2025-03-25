@@ -5,7 +5,7 @@ import styles from "./Tag.module.scss";
 interface ITag
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   size?: "sm" | "md";
-  color?: "primary" | "ghost" | "red" | "gray" | "green";
+  color?: "ghost" | "gray" | "href";
   href?: string;
   children: ReactNode;
 }
@@ -23,10 +23,8 @@ const Tag: FC<ITag> = ({
         [styles.sm]: size === "sm",
         [styles.md]: size === "md",
         [styles.ghost]: color === "ghost",
-        [styles.primary]: color === "primary",
-        [styles.red]: color === "red",
         [styles.gray]: color === "gray",
-        [styles.green]: color === "green",
+        [styles.href]: color === "href",
       })}
       {...props}
     >

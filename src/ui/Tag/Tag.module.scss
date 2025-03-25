@@ -5,44 +5,28 @@
   box-sizing: border-box;
   margin-right: 5px;
   border-radius: 20px;
-  padding: 5px 12px;
+  // padding: 5px 12px;
   color: $black;
 }
 
 .sm {
-  line-height: 12px;
+  line-height: 100%;
   font-size: 12px;
 }
 
 .md {
   line-height: 14px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .ghost {
-  border: 1px solid $gray-light;
-}
-
-.red {
-  color: $white;
-  font-weight: 600;
-  background-color: #de0000;
-}
-
-.primary {
-  border: 1px solid $primary;
-
-  color: $primary;
-}
-
-.green {
-  background-color: $green-light;
-  font-weight: 600;
-  color: $green;
+  color: $gray-light;
 }
 
 .gray {
-  background-color: $gray;
-  font-weight: 600;
-  color: $white;
+  color: $gray;
+}
+
+.href {
+  color: $blue;
 }

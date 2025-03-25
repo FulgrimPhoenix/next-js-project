@@ -1,16 +1,12 @@
 // @import "../styles/main.scss";
+@import "@/styles/abstracts/variables.scss";
 
 :root {
-  --black: #3b434e;
-  --white: #fff;
-  --gray: #a4a4a4;
-  --gray-light: #ebebeb;
-  --primary: #7653fc;
-  --primary-hover: #8f72ff;
-  --red: #fc836d;
-  --green: #1dc37e;
-  --green-light: #c8f8e4;
-  --font-family: "Roboto", "Roboto Fallback";
+  --black: $black;
+  --white: $white;
+  --gray: $gray;
+  --gray-light: $gray-light;
+  --blue: $blue;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.scss";
 import { SideBar } from "@/components";
 import "../styles/main.scss";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const open_sans = Open_Sans({
+  variable: "--open-sans",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "700", "900"],
+  weight: ["400", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable}`}>
+      <body className={`${open_sans.variable}`}>
         <SideBar />
         {children}
       </body>

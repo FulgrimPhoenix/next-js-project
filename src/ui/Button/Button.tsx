@@ -18,13 +18,7 @@ interface IButton
 
 const Button: FC<IButton> = (props) => {
   return (
-    <button
-      className={cn(styles.button, props.className, {
-        [styles.primary]: props.appearance === "primary",
-        [styles.ghost]: props.appearance === "ghost",
-      })}
-      {...props}
-    >
+    <button className={cn(styles.button)} {...props}>
       {props.children}
     </button>
   );

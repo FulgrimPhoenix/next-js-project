@@ -1,9 +1,9 @@
-@import "@/styles/abstracts/variables.scss";
+@use "@/styles/abstracts/variables" as *;
 
 .tag {
   display: inline-block;
   box-sizing: border-box;
-  margin-right: 5px;
+  margin: 0;
   border-radius: 20px;
   // padding: 5px 12px;
   color: $black;
@@ -29,4 +29,10 @@
 
 .href {
   color: $blue;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

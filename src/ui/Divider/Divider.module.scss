@@ -1,0 +1,14 @@
+@use "@/styles/abstracts/variables" as *;
+
+.divider {
+  color: $gray-light;
+  font-size: 12px;
+}
+
+.md {
+  margin: 0 5px;
+}
+
+.lg {
+  margin: 0 10px;
+}

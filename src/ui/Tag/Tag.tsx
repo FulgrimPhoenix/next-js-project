@@ -1,11 +1,12 @@
 import { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from "react";
 import cn from "classnames";
 import styles from "./Tag.module.scss";
+import Link from "next/link";
 
 interface ITag
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   size?: "sm" | "md";
-  color?: "ghost" | "gray" | "href";
+  color?: "ghost" | "gray";
   href?: string;
   children: ReactNode;
 }
@@ -24,14 +25,13 @@ const Tag: FC<ITag> = ({
         [styles.md]: size === "md",
         [styles.ghost]: color === "ghost",
         [styles.gray]: color === "gray",
-        [styles.href]: color === "href",
       })}
       {...props}
     >
       {href ? (
-        <a href={href} target="blank">
+        <Link href={href} className={cn(styles.href)}>
           {children}
-        </a>
+        </Link>
       ) : (
         <>{children}</>
       )}

@@ -1,9 +1,15 @@
+import { Card } from "@/components";
+import { ARTICLES_LIST } from "./page.consts";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  const a = 5;
-  debugger;
-  console.log(a);
-
-  return <div className={styles.page}></div>;
+  return (
+    <div className={styles.page}>
+      <div className={styles.grid}>
+        {ARTICLES_LIST.map((el, i) => (
+          <Card cardParams={el} key={i} />
+        ))}
+      </div>
+    </div>
+  );
 }

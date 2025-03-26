@@ -1,0 +1,10 @@
+@use "@/styles/abstracts/mixins" as *;
+
+.header {
+  @include flex-row;
+  height: 100px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  max-width: 1250px;
+  margin: 0 auto;
+}

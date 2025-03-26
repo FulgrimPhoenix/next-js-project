@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.scss";
-import { SideBar } from "@/components";
+import { Header } from "@/components";
 import "../styles/main.scss";
 
 const open_sans = Open_Sans({
   variable: "--open-sans",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${open_sans.variable}`}>
-        <SideBar />
+        <Header />
         {children}
       </body>
     </html>

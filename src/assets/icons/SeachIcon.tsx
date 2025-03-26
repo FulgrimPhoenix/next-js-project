@@ -1,4 +1,4 @@
-import { IIcon } from "@/app/types/icons.types";
+import { IIcon } from "@/types/icons.types";
 import { FC } from "react";
 
 const SearchIcon: FC<IIcon> = (props) => {

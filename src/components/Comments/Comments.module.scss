@@ -1,4 +1,21 @@
+@import "@/styles/abstracts/variables.scss";
+@import "@/styles/abstracts/mixins.scss";
+
 .comments {
   max-width: 800px;
   margin-bottom: 100px;
+}
+
+.comment {
+  margin-bottom: 23px;
+}
+
+.comments-list {
+  margin-bottom: 23px;
+}
+
+.tag-bar {
+  @include flex-row;
+  justify-content: flex-start;
+  margin: 0 0 6px;
 }

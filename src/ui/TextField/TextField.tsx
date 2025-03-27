@@ -16,6 +16,7 @@ const TextField: FC<ITextField> = (props) => {
   ) : (
     <textarea
       className={cn(styles["text-field"])}
+      name={props.name}
       rows={5}
       cols={50}
       placeholder={props.placeholder}

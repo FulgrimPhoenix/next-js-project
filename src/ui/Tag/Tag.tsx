@@ -6,7 +6,7 @@ import Link from "next/link";
 interface ITag
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   size?: "sm" | "md";
-  color?: "ghost" | "gray";
+  color?: "ghost" | "gray" | "accent";
   href?: string;
   children: ReactNode;
 }
@@ -25,6 +25,7 @@ const Tag: FC<ITag> = ({
         [styles.md]: size === "md",
         [styles.ghost]: color === "ghost",
         [styles.gray]: color === "gray",
+        [styles.accent]: color === "accent",
       })}
       {...props}
     >

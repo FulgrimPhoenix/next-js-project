@@ -10,7 +10,9 @@ interface ArticleParams {
 }
 
 const getAtrticle = (id: string) => {
-  return fetch(`http://localhost:3001/articles/${id}`)
+  return fetch(`http://localhost:3001/articles/${id}`, {
+    next: { revalidate: 60 },
+  })
     .then((res) => res.json())
     .catch((err) => {
       throw new Error(`Ошибка: ${err}`);

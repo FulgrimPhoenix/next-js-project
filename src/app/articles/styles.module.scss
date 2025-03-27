@@ -1,0 +1,13 @@
+@import "@/styles/abstracts/variables.scss";
+@import "@/styles/abstracts/mixins.scss";
+
+.page {
+  padding: 0 46px;
+}
+
+.grid {
+  @include grid-display(auto-fit, auto, minmax(350px, 350px), 33px);
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1146px;
+}

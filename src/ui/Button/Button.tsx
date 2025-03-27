@@ -12,7 +12,6 @@ interface IButton
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  appearance: "primary" | "ghost";
   children: ReactNode;
 }
 

@@ -1,0 +1,27 @@
+@import "@/styles/abstracts/variables.scss";
+@import "@/styles/abstracts/mixins.scss";
+
+.article {
+  @include flex-column;
+  position: relative;
+
+  .tag-bar {
+    @include flex-row;
+    justify-content: flex-start;
+    margin: 0 0 6px;
+  }
+
+  .image {
+    position: relative;
+    left: -26px;
+  }
+
+  .content {
+    margin: 50px 0 0;
+  }
+  .like-panel {
+    @include flex-row;
+    justify-content: flex-start;
+    margin: 50px 0;
+  }
+}

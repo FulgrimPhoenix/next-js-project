@@ -8,15 +8,12 @@ import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
 interface ICard
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   cardParams: {
+    id: string;
     title: string;
     description: string;
     date: string;
     time: string;
     catecogria: string;
-    href: {
-      link: string;
-      title: string;
-    };
     likes: number;
   };
 }
@@ -41,10 +38,10 @@ const Card: FC<ICard> = ({ cardParams, ...props }) => {
           <LikeButton variant="default" counter={cardParams.likes} />
         </div>
         <Title tag="h4">{cardParams.title}</Title>
-        <Paragraph size="sm">{cardParams.description}</Paragraph>
+        <Paragraph size="md">{cardParams.description}</Paragraph>
         <div className={cn(styles["action-bar"])}>
           <Tag color="ghost">{cardParams.time}</Tag>
-          <Tag href={cardParams.href.link}>{cardParams.href.title}</Tag>
+          <Tag href={`articles/${cardParams.id}`}>Читать →</Tag>
         </div>
       </div>
     </article>

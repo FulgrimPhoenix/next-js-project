@@ -7,6 +7,16 @@ module.exports = {
     config.resolve.alias["@"] = path.resolve(__dirname);
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http", // Используем http, так как это локальный сервер
+        hostname: "localhost",
+        port: "3000", // Порт, на котором работает сервер
+        pathname: "/images/**", // Путь к изображениям
+      },
+    ],
+  },
 };
 
 const nextConfig: NextConfig = {

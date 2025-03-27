@@ -7,6 +7,7 @@
   color: $gray;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .sm {
@@ -14,6 +15,9 @@
 }
 
 .md {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   font-size: 14px;
 }
 

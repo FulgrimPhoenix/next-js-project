@@ -4,41 +4,65 @@ import cn from "classnames";
 import { IArticle } from "@/types/articles.types";
 import Image from "next/image";
 import { Comments } from "@/components";
+import { FC } from "react";
 
-interface ArticleParams {
-  id: string;
+interface IArticlePage {
+  params: Promise<{
+    id: string;
+  }>;
+  searchParams: Promise<unknown>;
 }
 
-const getAtrticle = (id: string) => {
-  return fetch(`http://localhost:3001/articles/${id}`, {
-    next: { revalidate: 60 },
-  })
-    .then((res) => res.json())
-    .catch((err) => {
-      throw new Error(`Ошибка: ${err}`);
+const getArticle = async (id: string) => {
+  try {
+    const res = await fetch(`http://localhost:3001/articles/${id}`, {
+      next: { revalidate: 60 },
     });
+
+    if (!res.ok) {
+      console.error(
+        `Ошибка при получении статьи ${id}: ${res.status} ${res.statusText}`
+      );
+      return null;
+    }
+
+    return await res.json();
+  } catch (error) {
+    console.error("Ошибка при запросе статьи:", error);
+    return null;
+  }
 };
 
 export const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:3001/articles", {
-    next: { revalidate: 60 * 60 * 24 },
-  });
-  const articles = await res.json();
+  try {
+    const res = await fetch("http://localhost:3001/articles", {
+      next: { revalidate: 60 * 60 * 24 },
+    });
 
-  return articles.map((article: { id: string }) => ({
-    id: article.id.toString(),
-  }));
+    const articles = await res.json();
+
+    return articles.map((article: { id: string }) => ({
+      id: article.id.toString(),
+    }));
+  } catch (error) {
+    console.error("Ошибка при получении списка статей:", error);
+    return [];
+  }
 };
 
-const Article = async ({ params }: { params: ArticleParams }) => {
-  const article: IArticle = await getAtrticle(params.id);
+const Article: FC<IArticlePage> = async (props) => {
+  const { id } = await props.params;
 
-  console.log(article);
+  const article: IArticle = await getArticle(id);
+
+  if (!article) {
+    return <p>Статья не найдена или произошла ошибка загрузки.</p>;
+  }
 
   return (
     <>
       <Title tag="h2">
-        {article.title} {params.id}
+        {article.title} #{article.id}
       </Title>
       <div className={cn(styles["tag-bar"])}>
         <Tag color="gray">{article.catecogria}</Tag>
@@ -50,9 +74,9 @@ const Article = async ({ params }: { params: ArticleParams }) => {
         <LikeButton variant="default" counter={article.likes} />
       </div>
       <Image
-        src={"http://localhost:3000/images/article_avatar.png"}
+        src={article.photo}
         className={cn(styles["image"])}
-        alt="автатара"
+        alt="аватар статьи"
         width={687}
         height={440}
       />

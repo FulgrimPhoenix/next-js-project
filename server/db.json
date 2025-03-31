@@ -7,7 +7,7 @@
       "catecogria": "Front-end",
       "date": "1 месяц назад",
       "time": "3 минуты",
-      "photo": "http://localhost:3000/images/article_avatar.jpeg",
+      "photo": "/images/article_avatar.png",
       "likes": 4,
       "content": [
         {
@@ -23,7 +23,7 @@
       "catecogria": "Front-end",
       "date": "1 месяц назад",
       "time": "3 минуты",
-      "photo": "http://localhost:3000/images/article_avatar.jpeg",
+      "photo": "http://localhost:3000/images/article_avatar.png",
       "likes": 4,
       "content": [
         {
@@ -39,7 +39,7 @@
       "catecogria": "Front-end",
       "date": "1 месяц назад",
       "time": "3 минуты",
-      "photo": "http://localhost:3000/images/article_avatar.jpeg",
+      "photo": "/images/article_avatar.png",
       "likes": 4,
       "content": [
         {

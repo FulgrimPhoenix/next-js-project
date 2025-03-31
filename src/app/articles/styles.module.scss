@@ -1,5 +1,5 @@
-@import "@/styles/abstracts/variables.scss";
-@import "@/styles/abstracts/mixins.scss";
+@use "@/styles/abstracts/variables.scss" as *;
+@use "@/styles/abstracts/mixins.scss" as *;
 
 .page {
   padding: 0 46px;

@@ -1,2 +1,2 @@
-@import "./abstracts/mixins.scss";
-@import "./abstracts/variables.scss";
+@use "@/styles/abstracts/mixins.scss" as *;
+@use "@/styles/abstracts/variables.scss" as *;

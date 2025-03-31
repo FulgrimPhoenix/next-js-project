@@ -1,5 +1,5 @@
 import Image from "next/image";
-import cover from "@/assets/images/article_avatar.png";
+// import cover from "@/assets/images/article_avatar.png";
 import styles from "./Card.module.scss";
 import cn from "classnames";
 import { Divider, LikeButton, Paragraph, Tag, Title } from "@/ui";
@@ -10,6 +10,7 @@ interface ICard
   cardParams: {
     id: string;
     title: string;
+    photo: string;
     description: string;
     date: string;
     time: string;
@@ -23,9 +24,11 @@ const Card: FC<ICard> = ({ cardParams, ...props }) => {
     <article className={cn(styles["card"])} {...props}>
       <div className={cn(styles["image-area"])}>
         <Image
-          src={cover}
+          src={cardParams.photo}
           className={cn(styles["image"])}
-          alt="автатара"
+          alt="аватар статьи"
+          width={687}
+          height={440}
           priority
         />
       </div>

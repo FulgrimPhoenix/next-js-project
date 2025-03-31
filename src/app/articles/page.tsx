@@ -4,9 +4,7 @@ import cn from "classnames";
 import { IArticle } from "@/types/articles.types";
 
 const getArticles = async (): Promise<IArticle[]> => {
-  const res = await fetch("http://localhost:3001/articles", {
-    next: { revalidate: 60 },
-  });
+  const res = await fetch("http://localhost:3001/articles");
   return res.json();
 };
 

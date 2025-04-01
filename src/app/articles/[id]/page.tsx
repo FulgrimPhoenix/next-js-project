@@ -15,9 +15,7 @@ interface IArticlePage {
 
 const getArticle = async (id: string) => {
   try {
-    const res = await fetch(`http://localhost:3001/articles/${id}`, {
-      next: { revalidate: 60 },
-    });
+    const res = await fetch(`http://localhost:3001/articles/${id}`);
 
     if (!res.ok) {
       console.error(

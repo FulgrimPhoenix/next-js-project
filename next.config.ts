@@ -7,6 +7,7 @@ module.exports = {
     config.resolve.alias["@"] = path.resolve(__dirname);
     return config;
   },
+  distDir: "staticBuild",
   images: {
     remotePatterns: [
       {
@@ -20,6 +21,7 @@ module.exports = {
 };
 
 const nextConfig: NextConfig = {
+  output: "export",
   /* config options here */
 };
 
